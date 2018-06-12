@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电子相册系统</title>
+    <link rel="stylesheet" href="../static/index.css" type="text/css"/>
+    <!--引入一个js函数库-->
+    <script  src="../static/jquery-3.3.1.js"></script>
+    <script  src="../static/index.js"></script>
+
+</head>
+<body>
+    <div class="global">
+
+        <h1>电子相册系统</h1>
+
+        <div class="table">
+
+            <div class="first_row">
+                <div class="non_login" id="non_login">
+
+                    用户名:<input id="user" type="text" name="username">
+                    密码:<input id="pass" type="password" name="password">
+                    <span id="one_span">如果没有注册，请你先注册再次登录</span><br>
+                    <input type="submit"  value="登录" name="登录" onclick="proLogin()">
+                    <input type="submit"  value="注册" name="注册" onclick="proRegister()">
+                </div>
+                <div class="login" id="login">
+                    <p>
+                    <span id="two_span">您已经登录成功。你可以查看和上传图片</span>
+                    <button class="up_img" type="button" name="上传" value="上传" onclick="up_load();">上传</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="second_row">
+
+                <div class="left">
+
+                    <table >
+                        <tr>
+                            <td>相片列表</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table id="img_list">
+
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" value="up" onclick="turn_page(value);">上一页</button>
+                                <button type="button" value="down" onclick="turn_page(value);">下一页</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="right">
+                    <div class="show_img">
+                        <img src="../static/bg_index_4.jpg" />
+                    </div>
+
+
+                    <div id="upload_div"  title="上传图片">
+                        <form enctype="multipart/form-data">
+                            <table id="up_load_table" cellpadding="10px" cellspacing="1">
+                                <tr>
+                                    <td class="up_load_title">图片标题:</td>
+                                    <td><input type="text" id="title" name="title"></td>
+                                </tr>
+                                <tr>
+                                    <td class="up_load_title">浏览图片</td>
+                                    <td><input id="file" name="file" type="file" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <input type="button" value="上传" onclick="up_load_file();"/>
+                                        <input type="reset" value="重设"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>
