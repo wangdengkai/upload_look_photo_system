@@ -25,7 +25,7 @@ class CreateMysqlTable(object):
         #写创建表的SQL语句
         user_table="""
                     CREATE TABLE user_infomation(
-                      id INT NOT NULL ,
+                      id INT NOT NULL AUTO_INCREMENT,
                       user_name CHAR（20） NOT NULL,
                       pass CHAR（50） NOT NULL,
                       PRIMARY KEY(id),

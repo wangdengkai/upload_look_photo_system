@@ -5,7 +5,7 @@
 
 
 '''
-from app import app
+from photomain import app
 import pymysql
 # import logging
 # logging.basicConfig(level=app.logger.info,format="%(lineno)-2d %(funcName)-10s %(message)s")
